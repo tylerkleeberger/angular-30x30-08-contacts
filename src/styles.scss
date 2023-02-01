@@ -1,4 +1,5 @@
 
+
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -37,21 +38,26 @@ $angular-30x30-08-contacts-theme: mat.define-light-theme((
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* Application-wide Styles */
 h1 {
-  color: #7E57C2
+  color: #7E57C2;
   ;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
 h2, h3 {
-  color: #FFCA28
+  color: #D4E157;
   ;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
-body {
-}
+
 body, input[type="text"], button {
   color: #333;
   font-family: Roboto, Cambria, Georgia, serif;
@@ -61,7 +67,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  color: #26A69A;
+  color: #7E57C2;
   font-size: 1.2rem;
   padding: 1rem;
   margin-right: 1rem;
@@ -78,7 +84,12 @@ button:disabled {
   cursor: auto;
 }
 
+.vertical-space {
+  margin-top: 10%;
+}
+
 /* everywhere else */
 * {
   font-family: Roboto, Arial, Helvetica, sans-serif;
 }
+

@@ -1,6 +1,6 @@
 <!-- CONTACT DETAILS -->
 <div *ngIf="contact">
-    <h2>{{contact.name | uppercase}}</h2>
+    <h2 class="detail-title">{{contact.name | uppercase}}</h2>
     <div>id: {{contact.id}}</div>
     <div>
         <label for="contact-name">Name: </label>
@@ -8,4 +8,4 @@
     </div>
 </div>
 <button type="button" (click)="goBack()">Back</button>
-<button type="button" (click)="save()">save</button>
+<button type="button" (click)="save()">Save</button>

@@ -8,6 +8,7 @@ h2 {
     padding: 0;
     margin: auto;
     max-width: 1000px;
+    height: 100%;
   
     /* flexbox */
     display: flex;
@@ -19,13 +20,13 @@ h2 {
   }
   
   a {
-    background-color: #3f525c;
-    border-radius: 2px;
+    background-color: #D4E157;
+    border-radius: 25px;
     padding: 1rem;
     font-size: 1.2rem;
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: rgb(126, 125, 125);
     text-align: center;
     width: 100%;
     min-width: 70px;
@@ -46,5 +47,13 @@ h2 {
   }
   
   a:hover {
-    background-color: #000;
+    background-color: #7E57C2;
+    color: white
+  }
+
+  .directory-link {
+    background-color: rgb(125, 125, 125);
+    color: whitesmoke;
+    font-size: 22px;
+    border-radius: 3px;
   }

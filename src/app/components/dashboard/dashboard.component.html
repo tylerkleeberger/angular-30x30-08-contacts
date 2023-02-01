@@ -1,4 +1,5 @@
-<h2>Favorite Contacts</h2>
+<h2 style="
+color:rgb(89, 89, 89);font-weight: 600; ">Favorite Contacts</h2>
 <div class="contacts-menu">
     <a *ngFor="let contact of contacts"
     routerLink="/contact/{{contact.id}}">
@@ -6,3 +7,9 @@
     </a>
 </div>
 <app-contact-search></app-contact-search>
+<div>
+    <a mat-button class="directory-link"
+    routerLink="/contacts" routerLinkActive="active">Contact Directory
+        <mat-icon style="transform:scale(1.5)">fingerprint</mat-icon>
+    </a>
+</div>

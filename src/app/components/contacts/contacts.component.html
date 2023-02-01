@@ -1,15 +1,6 @@
 <!-- CONTACT LIST -->
 <h2>Contact List</h2>
 
-<!-- add item -->
-<div>
-    <label for="new-contact">Name: </label>
-    <input id="new-contact" #contactName />
-    <button type="button" class="add-button" (click)="add(contactName.value); contactName.value=''">
-        Add Contact
-    </button>
-</div>
-
 <!-- display list -->
 <ul class="contacts">
     <li *ngFor="let contact of contacts">
@@ -21,5 +12,14 @@
         (click)="delete(contact)">x</button>
     </li>
 </ul>
+
+<!-- add item -->
+<div>
+    <label for="new-contact">Name: </label>
+    <input id="new-contact" #contactName />
+    <button type="button" class="add-button" (click)="add(contactName.value); contactName.value=''">
+        Add Contact
+    </button>
+</div>
 
 <app-contact-details [contact]="selectedContact"></app-contact-details>

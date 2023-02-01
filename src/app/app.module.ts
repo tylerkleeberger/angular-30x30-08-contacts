@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ContactSearchComponent } from './components/contact-search/contact-search.component';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MessagesComponent } from './components/messages/messages.component';
     MaterialModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
 <mat-toolbar color="primary" class="toolbar">
     <!-- nav button -->
     <span>
-        <button mat-mini-fab color="accent">
+        <button mat-mini-fab color="accent" (click)="sidenav?.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
     </span>
@@ -19,10 +19,25 @@
         </button>
 </mat-toolbar>
 
+<!-- SIDENAV -->
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened="true">
+        <mat-nav-list>
+            <nav>
+                <a mat-button class="nav-link"
+                *ngFor="let link of links"
+                [routerLink]="link.path" routerLinkActive="active">
+                    <mat-icon style="transform:scale(1.5)">{{link.icon}}</mat-icon>
+                    {{link.title}}
+                </a>
 
-<nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/contacts">Contacts</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+            </nav>
+        </mat-nav-list>
+    </mat-sidenav>
+    <div class="main">
+        <router-outlet></router-outlet>
+        <div class="vertical-space"></div>
+        <app-messages></app-messages>
+    </div>
+
+</mat-sidenav-container>

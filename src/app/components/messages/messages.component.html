@@ -1,8 +1,14 @@
-<div *ngIf="messageService.messages.length">
+<mat-card class="messages">
+<div *ngIf="messageService.messages.length" 
+style="margin-left:5%; margin-right: 5%;">
     <h2>Messages</h2>
-    <button type="button" class="clear"
-    (click)="messageService.clear()">Clear Messages</button>
-    <div *ngFor="let message of messageService.messages">
+    <hr>
+    <div *ngFor="let message of messageService.messages" style="color:lightgray; margin-bottom: 7%;">
         {{message}}
     </div>
+    <button type="button" class="clear"
+    (click)="messageService.clear()">Clear Messages</button>
+    <div class="vertical-space"></div>
 </div>
+</mat-card>
+<div class="vertical-space"></div>
